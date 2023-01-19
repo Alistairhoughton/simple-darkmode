@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+    color: blueviolet;
+}
+
+:root {
+  --container-color-light: lightblue;
+  --title-color-light: black;
+  --subtitle-color-light: black;
+  --box-color-light: red;
+  --svg-color-light: black;
+
+  --container-color-dark: black;
+  --title-color-dark: white;
+  --subtitle-color-dark: white;
+  --box-color-dark: blue;
+  --svg-color-dark: white;
+  
+}
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --container-color: var(--container-color-dark);
+    --title-color: var(--title-color-dark);
+    --subtitle-color: var(--subtitle-color-dark);
+    --box-color: var(--box-color-dark);
+    --svg-color: var(--svg-color-dark);
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --container-color: var(--container-color-light);
+    --title-color: var(--title-color-light);
+    --subtitle-color: var(--subtitle-color-light);
+    --box-color: var(--box-color-light);
+    --svg-color: var(--svg-color-light);
+  }
+} */
+
+[color-scheme ="light"] {
+    --container-color: var(--container-color-light);
+    --title-color: var(--title-color-light);
+    --subtitle-color: var(--subtitle-color-light);
+    --box-color: var(--box-color-light);
+    --svg-color: var(--svg-color-light);
+}
+
+[color-scheme ="dark"] {
+    --container-color: var(--container-color-dark);
+    --title-color: var(--title-color-dark);
+    --subtitle-color: var(--subtitle-color-dark);
+    --box-color: var(--box-color-dark);
+    --svg-color: var(--svg-color-dark);
+}
+
+.container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 100px;
+}
+
+.box {
+  height: 300px;
+  width: 300px;
+}
+
+/* color utility classes  */
+
+
+
+.container-color {
+  background-color: var(--container-color);
+}
+
+.subtitle-color {
+  color: var(--subtitle-color); 
+}
+
+.title-color {
+  color: var(--title-color);
+}
+
+.box-color {
+  background-color: var(--box-color);
+}
+
+.svg-color {
+  fill: var(--svg-color);
+}
+
+/* color utility classes  */
